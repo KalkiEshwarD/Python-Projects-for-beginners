@@ -5,7 +5,7 @@ LB = int(input("Enter Lower Bound: "))                  # The random numbers tha
 UB = int(input("Enter Upper Bound: ")) + 1
 number = random.randrange(LB, UB, 1)                    # the function used to create a random number within a specific range.
 
-def the_guess(guess, turns, number):                    # A function I have created to make the work easier. It takes in 3 parameters, the last one, the ranodm number generated is a constant. The rest two keep changing.
+def the_guess(guess, turns, number):                    # A function I have created to make the work easier. It takes in 3 parameters, the last one, the random number generated is a constant. The rest two keep changing.
     if guess == number:
         print(f"Congratulations you got it in {turns + 1} turns.")                  
     else:
