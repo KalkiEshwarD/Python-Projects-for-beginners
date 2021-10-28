@@ -33,10 +33,12 @@ def score(result):
         computer_score +=1
     print("Your score: ", human_score, "\nComputer score: ", computer_score)
 
-    if computer_score == max:
-        print("Computer wins")
+    if computer_score == max and computer_score == human_score:
+        print("Draw")
     elif human_score == max:
         print("You win!")
+    elif computer_score == max:
+        print("Computer Wins")
     else:
         choice()
 
