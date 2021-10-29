@@ -13,9 +13,10 @@ y = ['y', 'Y']                                                                  
 
 def timer(st, bt, s):                                                                       # Here i create a function called timer that plays a sound (alarm) based on the amount of time the user sets it to. It takes in 3 arguments, session time, break time and number of sessions.
     time.sleep(st * 60)                                                                     # The sleep function basically puts python to 'sleep' for a certain amount of seconds. Since we are using minutes for each session, I multiply it by 60 to make it last for the specified duration.
-    os.startfile('file.mp3')                                                                # Here you could simply specify if the mp3 file name if it's in the same directory, else just type in the file path along with the file name.
-    time.sleep(bt * 60)                               
-    os.startfile('file.mp3')
+    os.startfile('file.mp3')                                                                #  # Here you could simply specify if the mp3 file name if it's in the same directory, else just type in the file path along with the file name.
+    if bt != 0:
+        time.sleep(bt * 60)                               
+        os.startfile('file.mp3')                                                                              
     global sessions                                                                         # Again, variables used in functions have to be first declared global variables if we want them to work.
     sessions -= 1
     while sessions > 0:                                                                     # Makes the program run over again until all the sessions are done.
